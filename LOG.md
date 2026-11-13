@@ -7,3 +7,4 @@
   - No GitHub origin yet, so the week-6 branch is committed locally and not pushed.
 - Interview answers that did not change the plan: NFL confirmed; default python3 (3.11); live odds calls capped at 1 per day, all responses cached to data/raw/.
 - nflverse games.csv downloaded once (read-only) and used to build Elo ratings; top team by rating sanity-checked (BUF).
+- GitHub repo was created and week 6 was pushed and merged to main on Nov 13.
