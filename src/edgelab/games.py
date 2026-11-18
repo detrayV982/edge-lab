@@ -23,3 +23,14 @@ def completed_games(games: pd.DataFrame) -> pd.DataFrame:
 # Games with no score yet, which are the ones we want predictions for.
 def upcoming_games(games: pd.DataFrame) -> pd.DataFrame:
     return games[games["home_score"].isna()]
+
+
+FRANCHISE_MOVES = {"OAK": "LV", "SD": "LAC", "STL": "LA"}
+
+
+# Renames old team codes (Oakland, San Diego, St. Louis) to their current ones so a franchise keeps one history.
+def normalize_team_codes(games: pd.DataFrame) -> pd.DataFrame:
+    result = games.copy()
+    for column in ["home_team", "away_team"]:
+        result[column] = result[column].replace(FRANCHISE_MOVES)
+    return result

@@ -5,3 +5,4 @@ __pycache__/
 data/raw/odds_*.json
 *.pyc
 data/raw/nflverse_games.csv
+data/raw/*.csv

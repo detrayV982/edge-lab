@@ -41,3 +41,20 @@ def build_ratings(completed_games: pd.DataFrame) -> dict[str, float]:
         home_won = 0.5 if game.home_score == game.away_score else float(game.home_score > game.away_score)
         ratings[game.home_team], ratings[game.away_team] = update_ratings(home, away, home_won)
     return ratings
+
+
+# Replays completed games in date order and records each game's ratings from BEFORE kickoff.
+def elo_history(completed_games: pd.DataFrame) -> pd.DataFrame:
+    ratings: dict[str, float] = {}
+    current_season = None
+    rows = []
+    for game in completed_games.sort_values(["gameday", "game_id"]).itertuples():
+        if current_season is not None and game.season != current_season:
+            ratings = regress_to_mean(ratings)
+        current_season = game.season
+        home = ratings.get(game.home_team, STARTING_RATING)
+        away = ratings.get(game.away_team, STARTING_RATING)
+        rows.append({"game_id": game.game_id, "home_elo": home, "away_elo": away})
+        home_won = 0.5 if game.home_score == game.away_score else float(game.home_score > game.away_score)
+        ratings[game.home_team], ratings[game.away_team] = update_ratings(home, away, home_won)
+    return pd.DataFrame(rows)
