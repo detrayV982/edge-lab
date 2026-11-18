@@ -1,0 +1,7 @@
+train games 4296 (seasons 2007-2022), test games 990 (seasons 2023-2026)
+source  games  brier  log_loss
+ model    990 0.2219    0.6336
+   elo    990 0.2267    0.6448
+market    990 0.2109    0.6098
+Brier gap model minus market: 95% interval 0.0056 to 0.0164 (negative = model better)
+{'intercept': 0.276, 'elo_diff': 0.4, 'offense_diff': 0.376, 'defense_diff': 0.165, 'rest_diff': 0.07}

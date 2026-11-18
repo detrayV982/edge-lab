@@ -15,12 +15,12 @@ Goal: compare my own win-probability model to the market. Finding that the model
 - [DONE] Unit tests and README
 
 ## Week 7: data and model
-- [ ] Real stats pipeline from nflverse
-- [ ] Better model than plain Elo
-- [ ] Time-based train/test split
-- [ ] Calibration curve
-- [ ] Paper-bet ledger (fake money)
-- [ ] Added (instructor request): first real model-vs-market comparison on held-out seasons, using moneylines in nflverse_games.csv as the market; Brier, log loss, calibration side by side; optional cached live pull if a key exists
+- [DONE] Real stats pipeline from nflverse
+- [DONE] Better model than plain Elo
+- [DONE] Time-based train/test split
+- [DONE] Calibration curve
+- [DONE] Paper-bet ledger (fake money)
+- [DONE] Added (instructor request): first real model-vs-market comparison on held-out seasons, using moneylines in nflverse_games.csv as the market; Brier, log loss, calibration side by side; optional cached live pull if a key exists
 
 ## Week 8: backtest (light scope, Thanksgiving week)
 - [ ] Backtester with a data-leakage guard

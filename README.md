@@ -13,5 +13,9 @@ The market is hard to beat, so finding the model does not beat it is a valid res
     .venv/bin/python scripts/compare_upcoming.py   # model vs market table
     .venv/bin/pytest                               # unit tests
 
-## Status (week 6)
-Odds math, Elo baseline, caching, and comparison table are built and unit tested. The live odds pull has not been run yet because no API key has been added.
+## Status (week 7)
+Added: nflverse team stats pipeline, leak-free pre-game features, logistic regression model, time split (train through 2022, test 2023 on), Brier and log loss scoring, calibration chart, fake-money paper ledger (data/ledger.csv).
+Result: on 990 held-out games the model beats plain Elo but not the no-vig market. See REPORT.md.
+
+    .venv/bin/python scripts/evaluate_week7.py   # held-out comparison, writes reports/
+    .venv/bin/python scripts/compare_live.py     # upcoming games: Elo vs model vs market
