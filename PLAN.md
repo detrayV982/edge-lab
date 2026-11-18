@@ -1,6 +1,6 @@
 # Edge Lab Plan
 
-Active week: 6
+Active week: 7
 
 Edge Lab is an NFL betting analysis tool. It never places real bets or touches real money. Paper bets use fake money only.
 Goal: compare my own win-probability model to the market. Finding that the model does not beat the market is a valid result and gets reported honestly.
@@ -20,6 +20,7 @@ Goal: compare my own win-probability model to the market. Finding that the model
 - [ ] Time-based train/test split
 - [ ] Calibration curve
 - [ ] Paper-bet ledger (fake money)
+- [ ] Added (instructor request): first real model-vs-market comparison on held-out seasons, using moneylines in nflverse_games.csv as the market; Brier, log loss, calibration side by side; optional cached live pull if a key exists
 
 ## Week 8: backtest (light scope, Thanksgiving week)
 - [ ] Backtester with a data-leakage guard
